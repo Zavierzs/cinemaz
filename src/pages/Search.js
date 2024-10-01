@@ -10,8 +10,7 @@ export const Search = ({apiPath }) => {
 
     const { data: movies } = useFetch(apiPath, queryTerm);
 
-    //Although only null will be returned but it is better for readability
-    const pageTitle = useTitle(`Search Results For ${queryTerm}`);
+    useTitle(`Search Results For ${queryTerm}`);
 
     return (
         <main>
